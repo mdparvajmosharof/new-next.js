@@ -10,15 +10,15 @@ export const Navbar = () => {
     const navlinks = [
         {
             name: "Home",
-            link: "/"
+            path: "/"
         },
         {
             name: "About",
-            link: "/about"
+            path: "/about"
         },
         {
             name: "Contact",
-            link: "/contact"
+            path: "/contact"
         }
     ]
 
@@ -27,9 +27,10 @@ export const Navbar = () => {
             <h1>Logo</h1>
             <div className='flex space-x-4'>
                 {
-                    navlinks.map(link => <Link href={link.link} key={link.name} className=''>{link.name}</Link>)
+                    navlinks.map(link => <Link href={link.path} key={link.name} className={`${pathName === link.path ? "text-blue-600" : "text-black"}`}>{link.name}</Link>)
                 }
             </div>
+            <button onClick={ha}>Log in</button>
         </div>
 
     )
