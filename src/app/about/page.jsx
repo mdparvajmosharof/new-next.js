@@ -1,7 +1,11 @@
+import AboutContant from '@/components/AboutContant';
 import React from 'react'
 const Aboutpage = () => {
   return (
-    <div>page</div>
+    <div>page
+      <AboutContant></AboutContant>
+    </div>
+    
   )
 }
 

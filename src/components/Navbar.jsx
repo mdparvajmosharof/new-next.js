@@ -20,6 +20,10 @@ export const Navbar = () => {
         {
             name: "Contact",
             path: "/contact"
+        },
+        {
+            name: "blogs",
+            path: "/blogs"
         }
     ]
 
@@ -27,6 +31,13 @@ export const Navbar = () => {
         router.push('/about')
     }
 
+    if(pathName.includes('dashboard')){
+        return (
+            <div className='bg-emerald-300'>
+                Dashboard Navbar
+            </div>
+        )
+    }
 
     return (
         <div className='bg-emerald-300 font-bold text-blue-900 flex justify-between items-center p-4' >
